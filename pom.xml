@@ -11,6 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
+        <kotlin.compiler.jvmSource>21</kotlin.compiler.jvmSource>
         <kotlin.compiler.jvmTarget>21</kotlin.compiler.jvmTarget>
     </properties>
 
