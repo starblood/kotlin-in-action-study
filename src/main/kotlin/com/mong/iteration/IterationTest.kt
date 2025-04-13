@@ -1,11 +1,12 @@
 package com.mong.iteration
 
-fun fizzBuzz(i: Int) = when {
-    i % 15 == 0 -> "FizzBuzz "
-    i % 3 == 0 -> "Fizz "
-    i % 5 == 0 -> "Buzz "
-    else -> "$i "
-}
+fun fizzBuzz(i: Int) =
+    when {
+        i % 15 == 0 -> "FizzBuzz "
+        i % 3 == 0 -> "Fizz "
+        i % 5 == 0 -> "Buzz "
+        else -> "$i "
+    }
 
 fun forInTest() {
     val collection = listOf("red", "green", "blue")

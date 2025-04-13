@@ -21,4 +21,3 @@ fun main() {
     val reader2 = BufferedReader(StringReader("z"))
     println(readNumber(reader2))
 }
-

@@ -1,7 +1,27 @@
+# ========================
+# Kotlin + Gradle 기본 설정
+# ========================
+
+# Gradle
+.gradle/
+build/
+out/
+
+# Maven
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# Kotlin Compiler Cache
+**/build/
+**/.kotlin_module
+
+# Spotless / ktlint / detekt
+.detekt-baseline.xml
+.idea/**/spotless*
+.idea/**/detekt*
+.idea/**/ktlint*
 
 ### IntelliJ IDEA ###
 .idea
@@ -18,18 +38,28 @@ target/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+# OS-specific
 .DS_Store
+Thumbs.db
+
+# Log & Temp
+*.log
+*.tmp
+
+# Kotlin Script
+*.kts~  # IntelliJ의 temp 파일
+
+# Avro Generated Code
+build/generated-main-avro-java/
+
+# Ktlint or Spotless generated backup
+*.bak
+
+# Mac/Linux 실행 파일 권한 부여된 script
+*.sh~
+
+# Windows-specific
+*.bat~

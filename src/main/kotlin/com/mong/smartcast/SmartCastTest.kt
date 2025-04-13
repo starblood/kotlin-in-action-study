@@ -1,9 +1,10 @@
 package com.mong.smartcast
 
 interface Expr
-class Num(val value: Int): Expr
-class Sum(val left: Expr, val right: Expr): Expr
 
+class Num(val value: Int) : Expr
+
+class Sum(val left: Expr, val right: Expr) : Expr
 
 fun evalRight(e: Expr): Int {
     if (e is Num) {
@@ -30,8 +31,7 @@ fun evalLeft(e: Expr): Int {
 fun eval(e: Expr): Int {
     if (e is Num) {
         return e.value
-    }
-    else if (e is Sum) {
+    } else if (e is Sum) {
         return eval(e.left) + eval(e.right)
     } else {
         throw IllegalArgumentException("Unknown expression")
@@ -39,9 +39,13 @@ fun eval(e: Expr): Int {
 }
 
 fun evalConcise(e: Expr): Int =
-    if (e is Num) e.value
-    else if (e is Sum) evalConcise(e.left) + evalConcise(e.right)
-    else throw IllegalArgumentException("Unknown expression")
+    if (e is Num) {
+        e.value
+    } else if (e is Sum) {
+        evalConcise(e.left) + evalConcise(e.right)
+    } else {
+        throw IllegalArgumentException("Unknown expression")
+    }
 
 fun evalWithWhen(e: Expr): Int =
     when (e) {

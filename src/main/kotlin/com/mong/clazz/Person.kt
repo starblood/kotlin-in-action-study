@@ -20,7 +20,7 @@ class Rectangle(val height: Int, val width: Int) {
 }
 
 fun main() {
-    val p1 = Person("john")
+//    val p1 = Person("john")
     val p2 = Person2("bob")
     val p3 = Person3("terry", true)
     // println(p1.name): compile error
@@ -30,6 +30,6 @@ fun main() {
     p3.isStudent = false
     println(p3)
 
-    val rec1 = Rectangle(10, 20)
+    val rec1 = Rectangle(height = 10, width = 20)
     println(rec1.isSquare)
 }
