@@ -36,10 +36,9 @@ spotless {
     }
 }
 
-
 detekt {
     buildUponDefaultConfig = true // 기본 룰을 기반으로
-    allRules = false              // 실험적인 룰은 제외
+    allRules = false // 실험적인 룰은 제외
     config.setFrom(files("config/detekt/detekt.yml")) // 또는 생략 가능
     baseline = project.layout.projectDirectory.file("detekt-baseline.xml").asFile
 }
